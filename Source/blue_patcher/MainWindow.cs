@@ -37,6 +37,9 @@ public partial class MainWindow: Gtk.Window
 			                                     DialogFlags.Modal, MessageType.Info, 
 			                                     ButtonsType.Ok,
 			                                      "You didn't select a valid file!");
+			md.Run();
+			md.Destroy();
+				
 			return;
 		}
 		patcher.Patch(pathField.Text);
